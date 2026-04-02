@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    display: flex;
+    background: #f4f6f9;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    margin-left: 100px;
+    width: 100% ;
+    padding: 30px;
+}
+
+/* ===== TITLE ===== */
+h2 {
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+/* ===== TABLE WRAPPER ===== */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+}
+
+/* HEADER */
+table th {
+    background: #3b82f6;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+/* DATA */
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+/* MESSAGE COLUMN */
+.msg {
+    text-align: left;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+/* HOVER */
+table tr:hover {
+    background: #f1f5f9;
+}
+
+/* NO DATA */
+.no-data {
+    text-align: center;
+    color: red;
+    padding: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    table th,
+    table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

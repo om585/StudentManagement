@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    display: flex;
+    background: #f1f5f9;
+}
+
+/* ===== MAIN CONTENT ===== */
+.teacher-content {
+    margin-left: 120px;
+    width:100% ;
+    padding: 30px;
+}
+
+/* ===== TITLE ===== */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+/* ===== FORM CARD ===== */
+.form-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== DATE INPUT ===== */
+input[type="date"] {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* ===== ERROR ===== */
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* ===== TABLE WRAPPER ===== */
+.table-container {
+    width: 100%;
+    overflow-x: auto;  /* 🔥 FIX OVERFLOW */
+    margin-top: 15px;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+}
+
+/* HEADER */
+table th {
+    background: #3b82f6;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+/* DATA */
+table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* HOVER */
+table tr:hover {
+    background: #f1f5f9;
+}
+
+/* ===== RADIO BUTTONS ===== */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* ===== LINK ===== */
+a {
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== BUTTON ===== */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #22c55e;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .teacher-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .teacher-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    table th,
+    table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

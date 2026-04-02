@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/* =========================
+   LOGIN PAGE STYLES
+   ========================= */
+   
+/* =========================
+   ROLE BASED THEMES
+   ========================= */
+
+/* ===== ADMIN THEME ===== */
+.admin-theme {
+    background: linear-gradient(135deg, #b31217, #e52d27);
+}
+
+.admin-theme button {
+    background: linear-gradient(90deg, #b31217, #e52d27);
+}
+
+.admin-theme input:focus {
+    border-color: #b31217;
+    box-shadow: 0 0 0 2px rgba(179, 18, 23, 0.25);
+}
+
+/* ===== STUDENT THEME ===== */
+.student-theme {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+}
+
+.student-theme button {
+    background: linear-gradient(90deg, #2193b0, #6dd5ed);
+}
+
+.student-theme input:focus {
+    border-color: #2193b0;
+    box-shadow: 0 0 0 2px rgba(33, 147, 176, 0.25);
+}
+
+/* ===== TEACHER THEME ===== */
+.teacher-theme {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.teacher-theme button {
+    background: linear-gradient(90deg, #11998e, #38ef7d);
+}
+
+.teacher-theme input:focus {
+    border-color: #11998e;
+    box-shadow: 0 0 0 2px rgba(17, 153, 142, 0.25);
+}
+
+.login-container {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    padding: 20px;
+}
+
+/* Login Card */
+.login-container form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title */
+.login-container h2 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Input Fields */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.login-container input:focus {
+    border-color: #4e54c8;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(78, 84, 200, 0.2);
+}
+
+/* Login Button */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(78, 84, 200, 0.4);
+}
+
+/* Error Message */
+.login-container .error {
+    margin-top: 15px;
+    color: #ffeb3b;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 768px) {
+    .login-container h2 {
+        font-size: 24px;
+    }
+
+    .login-container form {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-container h2 {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,105 @@
+//Admin panel username and password because it is static
+//username="asmin"
+//password="1234"
+
+
+show databases;
+
+create database studentMS;
+
+use studentMS;
+
+
+CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone VARCHAR(15),
+    dob DATE,
+    address TEXT,
+    student_class VARCHAR(20),
+    department VARCHAR(50),
+    gender VARCHAR(10),
+    guardian VARCHAR(100),
+    profile_image VARCHAR(255),
+    password VARCHAR(255) NOT NULL,
+    status VARCHAR(20) DEFAULT 'pending'
+);
+
+select * from students;
+
+
+CREATE TABLE teachers (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone VARCHAR(15),
+    department VARCHAR(50),
+    student_class VARCHAR(20),  -- FY / SY / TY
+    gender VARCHAR(10),
+    password VARCHAR(255) NOT NULL
+);
+
+select * from teachers;
+
+
+
+CREATE TABLE attendance (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id INT NOT NULL,
+    teacher_id INT NOT NULL,
+    date DATE NOT NULL,
+    status VARCHAR(10) NOT NULL,
+
+    -- Foreign Keys
+    FOREIGN KEY (student_id) REFERENCES students(id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (teacher_id) REFERENCES teachers(id)
+        ON DELETE CASCADE,
+
+    -- Prevent duplicate attendance per day
+    UNIQUE(student_id, date)
+);
+
+select * from attendance;
+
+SELECT date, status FROM attendance WHERE student_id = 2;
+
+
+CREATE TABLE marks (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id INT,
+    subject VARCHAR(100),
+    marks INT,
+    teacher_id INT,
+    exam_type VARCHAR(50),
+
+    FOREIGN KEY (student_id) REFERENCES students(id) ON DELETE CASCADE,
+    FOREIGN KEY (teacher_id) REFERENCES teachers(id) ON DELETE CASCADE,
+
+    UNIQUE(student_id, subject, exam_type)
+);
+
+select * from marks;
+
+
+CREATE TABLE chat_messages (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    sender_name VARCHAR(100),
+    message TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE contact_messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    message TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+select * from contact_messages;

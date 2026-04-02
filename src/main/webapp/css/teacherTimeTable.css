@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    display: flex;
+    background: #f1f5f9;
+}
+
+/* ===== MAIN CONTENT ===== */
+.teacher-content {
+    margin-left: 100px;
+    width: 100%;
+    padding: 30px;
+}
+
+/* ===== TITLE ===== */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #334155;
+}
+
+/* ===== CARD ===== */
+.timetable-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+/* ===== TABLE WRAPPER ===== */
+.table-container {
+    width: 100%;
+    overflow-x: auto;   /* 🔥 FIX OVERFLOW */
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    min-width: 750px;
+    border-collapse: collapse;
+}
+
+/* HEADER */
+table th {
+    background: #3b82f6;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* FIRST COLUMN (DAY) */
+table td:first-child {
+    background: #f8fafc;
+    font-weight: bold;
+}
+
+/* DATA */
+table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* HOVER EFFECT */
+table tr:hover {
+    background: #e0f2fe;
+}
+
+/* ===== SUBJECT TAG STYLE (OPTIONAL) */
+.lab {
+    background: #fef3c7;
+    border-radius: 6px;
+}
+
+.project {
+    background: #dcfce7;
+    border-radius: 6px;
+}
+
+/* ===== NO DATA ===== */
+.no-data {
+    text-align: center;
+    color: red;
+    margin-top: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .teacher-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .teacher-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    table th,
+    table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

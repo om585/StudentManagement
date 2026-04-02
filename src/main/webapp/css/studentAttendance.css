@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    padding: 30px;
+}
+
+/* ===== CHART CONTAINER ===== */
+.chart-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== CANVAS FIX ===== */
+.chart-container canvas {
+    width: 100% !important;
+    height: 300px !important;   /* fixed height */
+}
+
+/* ===== FILTER FORM ===== */
+.filter-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-form input,
+.filter-form button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.filter-form button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-form button:hover {
+    background: #2563eb;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .chart-container canvas {
+        height: 250px !important;
+    }
+}

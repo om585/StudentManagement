@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    display: flex;
+    background: #f4f6f9;
+}
+
+/* ===== SIDEBAR (MATCH YOUR adminHeader.jsp) ===== */
+
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    margin-left: 30px;   /* IMPORTANT FIX */
+    width: calc(100% - 230px);
+    min-height: 100vh;
+    padding: 30px 40px;
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+h3 {
+    margin-top: 25px;
+    background: #334155;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+h4 {
+    margin-top: 10px;
+    background: #475569;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* ===== TABLE WRAPPER (VERY IMPORTANT) ===== */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+/* Scrollbar (optional nice look) */
+.table-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 10px;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    min-width: 900px; /* prevents breaking */
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Header */
+table th {
+    background: #e2e8f0;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #1e293b;
+    border-bottom: 2px solid #cbd5e1;
+    white-space: nowrap;
+}
+
+/* Data */
+table td {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    white-space: nowrap;
+}
+
+/* Hover */
+table tr:hover {
+    background: #f8fafc;
+}
+
+/* ===== RANK STYLING ===== */
+table td:first-child {
+    font-weight: bold;
+}
+
+/* Top 3 Highlight */
+table tr:nth-child(2) td:first-child {
+    color: #16a34a; /* Rank 1 */
+}
+
+table tr:nth-child(3) td:first-child {
+    color: #2563eb; /* Rank 2 */
+}
+
+table tr:nth-child(4) td:first-child {
+    color: #f59e0b; /* Rank 3 */
+}
+
+/* ===== TOTAL & PERCENT ===== */
+table td:nth-last-child(3) {
+    font-weight: bold;
+    color: #0f172a;
+}
+
+table td:nth-last-child(2) {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* ===== GRADE ===== */
+.grade {
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Grade Colors */
+.grade.A { background: #22c55e; }
+.grade.B { background: #3b82f6; }
+.grade.C { background: #f59e0b; }
+.grade.F { background: #ef4444; }
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    table th,
+    table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3, h4 {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* =================================================
+   STUDENT DASHBOARD
+   ================================================= */
+
+.student-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.student-sidebar {
+    width: 240px;
+    background: #0f766e; /* student green/teal */
+    color: #ffffff;
+    padding: 25px 20px;
+    flex-shrink: 0;
+}
+
+.student-sidebar h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #a7f3d0;
+}
+
+.student-sidebar ul {
+    list-style: none;
+}
+
+.student-sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.student-sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #ecfeff;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.student-sidebar ul li a:hover {
+    background: #115e59;
+    color: #ffffff;
+}
+
+/* Logout */
+.student-sidebar .logout a {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+.student-sidebar .logout a:hover {
+    background: #b91c1c;
+}
+
+/* MAIN CONTENT */
+.student-main {
+    flex: 1;
+    padding: 30px;
+    background: #f8fafc;
+}
+
+/* HEADER */
+.student-content h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0f172a;
+}
+
+.student-content p {
+    margin-bottom: 30px;
+    color: #475569;
+}
+
+/* CARDS (reuse dashboard-cards & dashboard-card styles) */
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .student-sidebar {
+        width: 210px;
+    }
+}
+
+@media (max-width: 700px) {
+    .student-layout {
+        flex-direction: column;
+    }
+
+    .student-sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .student-sidebar ul li a {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .student-content h1 {
+        font-size: 22px;
+    }
+}

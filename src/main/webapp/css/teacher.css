@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* =================================================
+   TEACHER DASHBOARD
+   ================================================= */
+
+.teacher-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.teacher-sidebar {
+    width: 250px;
+    background: #134e4a; /* dark teal */
+    color: #ffffff;
+    padding: 25px 20px;
+    flex-shrink: 0;
+}
+
+.teacher-sidebar h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #99f6e4;
+}
+
+.teacher-sidebar ul {
+    list-style: none;
+}
+
+.teacher-sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.teacher-sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #ecfeff;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.teacher-sidebar ul li a:hover {
+    background: #115e59;
+    color: #ffffff;
+}
+
+/* Logout */
+.teacher-sidebar .logout a {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+.teacher-sidebar .logout a:hover {
+    background: #b91c1c;
+}
+
+/* MAIN CONTENT */
+.teacher-main {
+    flex: 1;
+    padding: 30px;
+    background: #f8fafc;
+}
+
+/* HEADER */
+.teacher-content h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0f172a;
+}
+
+.teacher-content p {
+    margin-bottom: 30px;
+    color: #475569;
+}
+
+/* Cards reuse:
+   .dashboard-cards
+   .dashboard-card
+*/
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .teacher-sidebar {
+        width: 220px;
+    }
+}
+
+@media (max-width: 700px) {
+    .teacher-layout {
+        flex-direction: column;
+    }
+
+    .teacher-sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .teacher-sidebar ul li a {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .teacher-content h1 {
+        font-size: 22px;
+    }
+}
